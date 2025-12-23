@@ -11,17 +11,24 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
 import javax.naming.Name;
 
 public class ModBlocks {
 
+
     public static final Block PINK_GARNET_BLOCK = registerBlock("pink_garnet_block",
             new Block(AbstractBlock.Settings.create()
                     .strength(4f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+    public static final Block RAW_PINK_GARNET_BLOCK = registerBlock("raw_pink_garnet_block",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(4f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.STONE)));
 
 
 
@@ -47,6 +54,7 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(ModBlocks.PINK_GARNET_BLOCK);
+            fabricItemGroupEntries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);
         });
     }
 }

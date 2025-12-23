@@ -1,6 +1,7 @@
 package net.catgod.firstmod;
 
 import net.catgod.firstmod.block.ModBlocks;
+import net.catgod.firstmod.item.ModItemGroups;
 import net.catgod.firstmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,6 +14,8 @@ public class FirstMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
+		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 	}
